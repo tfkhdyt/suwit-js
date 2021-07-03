@@ -1,9 +1,7 @@
-function timeout() {
-  $(".alert").fadeTo(4000, 500).slideUp(500, function(){
-    $(".alert").slideUp(500);
-});
-}
 function check(user) {
+  $(".alert").fadeTo(4000, 500).slideUp(500, function() {
+    $(".alert").slideUp(500);
+  });
   var com = Math.floor(Math.random() * (3 - 1 + 1) + 1);
   var warna;
   switch (com) {
@@ -67,21 +65,17 @@ function check(user) {
   <h5>ANDA ${hasil}!</h5>
   </div>
   `;
-  timeout();
 }
 
 function gunting() {
   var user = 'gunting';
   check(user);
-  
 }
 function kertas() {
   var user = 'kertas';
   check(user);
-  
 }
 function batu() {
   var user = 'batu';
   check(user);
-  
 }
