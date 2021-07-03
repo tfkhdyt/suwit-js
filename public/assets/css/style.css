@@ -1,0 +1,9 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.card-header, .card-title, h5 {
+  font-weight: bold;
+}
+.card-footer {
+  font-weight: 300;
+}
