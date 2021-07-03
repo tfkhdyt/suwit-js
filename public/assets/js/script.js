@@ -1,7 +1,4 @@
 function check(user) {
-  $(".alert").fadeTo(4000, 500).slideUp(500, function() {
-    $(".alert").slideUp(500);
-  });
   var com = Math.floor(Math.random() * (3 - 1 + 1) + 1);
   var warna;
   switch (com) {
@@ -59,10 +56,13 @@ function check(user) {
       break;
   }
   elementHasil.innerHTML = `
-  <div class="alert alert-${warnaAlert} pt-2 pb-1" role="alert">
-  Anda memilih <span class="badge bg-${warnaUser}"><i class="fa fa-${iconUser}"></i> ${user}</span><br>
-  Bot memilih <span class="badge bg-${warna}"><i class="fa fa-${icon}"></i> ${com}</span>
-  <h5>ANDA ${hasil}!</h5>
+  <div class="alert alert-${warnaAlert} pt-3 pb-2 alert-dismissible fade show" role="alert">
+    <div class="ms-4">
+      Anda memilih <span class="badge bg-${warnaUser}"><i class="fa fa-${iconUser}"></i> ${user}</span><br>
+      Bot memilih <span class="badge bg-${warna}"><i class="fa fa-${icon}"></i> ${com}</span>
+      <h5>ANDA ${hasil}!</h5>
+      <div type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></div>
+    </div>
   </div>
   `;
 }
