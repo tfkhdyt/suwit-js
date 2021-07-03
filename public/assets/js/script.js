@@ -67,20 +67,21 @@ function check(user) {
   <h5>ANDA ${hasil}!</h5>
   </div>
   `;
+  timeout();
 }
 
 function gunting() {
   var user = 'gunting';
   check(user);
-  timeout();
+  
 }
 function kertas() {
   var user = 'kertas';
   check(user);
-  timeout();
+  
 }
 function batu() {
   var user = 'batu';
   check(user);
-  timeout();
+  
 }
