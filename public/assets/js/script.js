@@ -1,9 +1,7 @@
 function timeout() {
-  window.setTimeout(function() {
-    $(".alert").fadeTo(250, 0).slideUp(250, function() {
-      $(this).remove();
-    });
-  }, 4000);
+  $(".alert").fadeTo(4000, 500).slideUp(500, function(){
+    $(".alert").slideUp(500);
+});
 }
 function check(user) {
   var com = Math.floor(Math.random() * (3 - 1 + 1) + 1);
