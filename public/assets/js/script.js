@@ -68,7 +68,7 @@ function check(user) {
   elementHasil.innerHTML = `
   <div class="alert alert-${warnaAlert} pt-3 pb-2 alert-dismissible fade show" role="alert">
     <div class="ms-4">
-      Anda memilih <span class="badge bg-${warnaUser}"><i class="fa fa-${iconUser}"></i> ${user}</span><br>
+      Kamu memilih <span class="badge bg-${warnaUser}"><i class="fa fa-${iconUser}"></i> ${user}</span><br>
       Bot memilih <span class="badge bg-${warna}"><i class="fa fa-${icon}"></i> ${com}</span>
       <h5>ANDA ${hasil}!</h5>
       <div type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></div>
