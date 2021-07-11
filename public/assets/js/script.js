@@ -1,3 +1,6 @@
+var skorKamu = 0;
+var skorBot = 0;
+
 function check(user) {
   var com = Math.floor(Math.random() * (3 - 1 + 1) + 1);
   var warna;
@@ -44,17 +47,24 @@ function check(user) {
   }
   var elementHasil = document.getElementById('hasil');
   var warnaAlert;
+  
   switch (hasil) {
     case 'MENANG':
       warnaAlert = 'success'
+      skorKamu++;
       break;
     case 'KALAH':
       warnaAlert = 'danger'
+      skorBot++;
       break;
     case 'SERI':
       warnaAlert = 'primary'
       break;
   }
+  
+  var skor = document.getElementById('skor');
+  skor.innerHTML = `${skorKamu} - ${skorBot}`;
+  
   elementHasil.innerHTML = `
   <div class="alert alert-${warnaAlert} pt-3 pb-2 alert-dismissible fade show" role="alert">
     <div class="ms-4">
@@ -79,3 +89,5 @@ function batu() {
   var user = 'batu';
   check(user);
 }
+
+
