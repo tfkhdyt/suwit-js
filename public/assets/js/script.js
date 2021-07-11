@@ -1,5 +1,10 @@
 var skorKamu = 0;
 var skorBot = 0;
+var textKamu = document.getElementById('textKamu');
+var textBot = document.getElementById('textBot');
+
+textKamu.style.color = 'blue';
+textBot.style.color = 'blue';
 
 function check(user) {
   var com = Math.floor(Math.random() * (3 - 1 + 1) + 1);
@@ -64,6 +69,22 @@ function check(user) {
   
   var skor = document.getElementById('skor');
   skor.innerHTML = `${skorKamu} - ${skorBot}`;
+  if (skorKamu > skorBot){
+    textKamu.style.fontWeight = 'bold';
+    textBot.style.fontWeight = '400';
+    textKamu.style.color = 'green';
+    textBot.style.color = 'red';
+  }else if (skorKamu < skorBot){
+    textBot.style.fontWeight = 'bold';
+    textKamu.style.fontWeight = '400';
+    textBot.style.color = 'green';
+    textKamu.style.color = 'red';
+  }else{
+    textBot.style.fontWeight = null;
+    textKamu.style.fontWeight = null;
+    textBot.style.color = 'blue';
+    textKamu.style.color = 'blue';
+  }
   
   elementHasil.innerHTML = `
   <div class="alert alert-${warnaAlert} pt-3 pb-2 alert-dismissible fade show" role="alert">
